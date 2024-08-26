@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_safe_driving"
+        android:alpha="0.5" />
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Top Section -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- App Icon -->
+            <ImageView
+                android:id="@+id/appIcon"
+                android:layout_width="88dp"
+                android:layout_height="87dp"
+                android:contentDescription="@string/name"
+                android:src="@drawable/ic_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- App Title -->
+            <TextView
+                android:id="@+id/appTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="I'm The Driver"
+                android:textColor="@color/primaryDarkColor"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appIcon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Camera Adjustment Button -->
+        <Button
+            android:id="@+id/cameraAdjustmentButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Camera Adjustment"
+            android:padding="12dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/topSection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Toggle for Eye Closure Sound -->
+        <LinearLayout
+            android:id="@+id/eyeClosureSoundLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cameraAdjustmentButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eye Closure Sound"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <Switch
+                android:id="@+id/eyeClosureSoundToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Toggle for Yawn Sound -->
+        <LinearLayout
+            android:id="@+id/yawnSoundLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/eyeClosureSoundLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yawn Sound"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <Switch
+                android:id="@+id/yawnSoundToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Emergency Call Number Input -->
+        <EditText
+            android:id="@+id/emergencyCallNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Emergency Call Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/yawnSoundLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveSettingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/emergencyCallNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Bottom Navigation Bar -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_navigation_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
