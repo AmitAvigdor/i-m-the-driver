@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="bounding_box_color">#234567</color>
+
+    <color name="primaryColor">#1F6E8C</color>
+    <color name="primaryDarkColor">#0E2954</color>
+    <color name="primaryLightColor">#BB86FC</color>
+    <color name="backgroundColor">#121212</color>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#B0BEC5</color>
+    <color name="errorColor">#CF6679</color>
+    <color name="blue">#1C82AD</color>
+    <color name="green">#03C988</color>
+</resources>
