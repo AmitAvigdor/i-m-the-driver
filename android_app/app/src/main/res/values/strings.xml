@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">YOLOv8 TfLite</string>
-    <string name="name">I AM THE DRIVER</string>
-    <string name="refreshment_station">Refreshment Station</string>
-    <string name="driving_tips">Driving Tips</string>
-    <string name="call_emergency">Call Emergency</string>
-</resources>
